@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+
+
+
+
+
+        function getComputerChoice() {
+            const optionsa = ["rock", "paper", "scissors"];
+
+            const randomElement = optionsa[Math.floor(Math.random() * optionsa.length)];
+
+            return randomElement;
+        };
+
+        console.log(getComputerChoice());
+
+
+
+
+
+        let hchoice = (prompt("Your Choice:")).toLowerCase();
+
+
+          function getHumanChoice() {
+            if (hchoice == "paper" ||
+                hchoice == "rock" ||
+               hchoice == "scissors"
+           ) {
+               return hchoice;
+        
+           } else {
+               console.log("ERROR! INVALID VALUE!!");
+              }
+
+
+           }
+
+         console.log(getHumanChoice());
+
+
+        let humanScore = 0;
+        let computerScore = 0;
+        let score = `The score is Human:${humanScore} and Computer:${computerScore}`
+
+        function playRound() {
+
+
+            if (getComputerChoice() === hchoice && hchoice === getComputerChoice()) {
+                console.log("Tie");
+                console.log(score);
+
+            } else if (getComputerChoice() === "rock" && hchoice === "paper") {
+                console.log("paper beats rock");
+                humanScore++;
+                console.log(score);
+            } else if (getComputerChoice() === "rock" && hchoice === "scissors") {
+                console.log("rock beats scissors");
+                computerScore++;
+                console.log(score);
+            } else if (getComputerChoice() === "paper" && hchoice === "rock") {
+                console.log("paper beats rock");
+                computerScore++;
+                console.log(score);
+            } else if (getComputerChoice() === "paper" && hchoice === "scissors") {
+                console.log("scissors beats paper");
+                humanScore++;
+                console.log(score);
+            } else if (getComputerChoice() === "scissors" && hchoice === "rock") {
+                console.log("rock beats scissors");
+                humanScore++;
+                console.log(score);
+            } else if (getComputerChoice() === "scissors" && hchoice === "paper") {
+                console.log("scissors beats paper");
+                computerScore++;
+                console.log(score);
+            } else {
+                console.log("invalid")
+            }
+        }
+
+        playRound();
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
 </body>
+
 </html>
