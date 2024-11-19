@@ -1,27 +1,2 @@
- else if (computerChoice === "rock" && humanChoice === "scissors") {
-    console.log("Computer wins: rock beats scissors");
-    computerScore++;
-    console.log(score);
-} else if (computerChoice === "paper" && humanChoice === "rock") {
-    console.log("Computer wins: paper beats rock");
-    computerScore++;
-    console.log(score);
-} else if (computerChoice === "paper" && humanChoice === "scissors") {
-    console.log("Player wins: scissors beats paper");
-    humanScore++;
-    console.log(score);
-} else if (computerChoice === "scissors" && humanChoice === "rock") {
-    console.log("Player wins: rock beats scissors");
-    humanScore++;
-    console.log(score);
-} else if (computerChoice === "scissors" && humanChoice === "paper") {
-    console.log("Computer wins: scissors beats paper");
-    computerScore++;
-    console.log(score);
-}
 
-else if (computerChoice === "rock" && humanChoice === "paper") {
-                console.log(`Comp choose: ${computerChoice} Player wins: paper beats rock`);
-                humanScore++;
-                console.log(score);
-            }
+
