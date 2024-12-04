@@ -15,6 +15,16 @@
 
     <button class="sButton">Scissors</button>
 
+    <div id="roond"></div>
+
+    <div id="eee"></div>
+
+    <div id="exp"></div>
+
+    <div id="rezultz"></div>
+
+    <div id="who"></div>
+
 
 
     <script>
@@ -27,8 +37,9 @@
 
 
         rButton.addEventListener("click", () => {
-            console.log(playRound("rock"));
+            console.log(playRound("rock"))
         });
+        
 
         pButton.addEventListener("click", () => {
             console.log(playRound("paper"))
@@ -42,6 +53,10 @@
 
         let humanScore = 0;
         let computerScore = 0;
+
+        let i = 0;
+
+  
 
         function playRound(hchoice) {
 
@@ -66,47 +81,47 @@
 
             let computerChoice = getComputerChoice();
 
-           // console.log(`Round ${i + 1}`);
+            document.getElementById("roond").innerHTML = (`Round ${i = i + 1}`);
 
 
             if (computerChoice === humanChoice && humanChoice === computerChoice) {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`Tie`);
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`Tie`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "rock" && humanChoice === "paper") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`paper beats rock, human wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`paper beats rock, human wins!`);
                 humanScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "rock" && humanChoice === "scissors") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`rock beats scissors, computer wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`rock beats scissors, computer wins!`);
                 computerScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "paper" && humanChoice === "rock") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`paper beats rock, computer wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`paper beats rock, computer wins!`);
                 computerScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "paper" && humanChoice === "scissors") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`scissors beats paper, human wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`scissors beats paper, human wins!`);
                 humanScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "scissors" && humanChoice === "rock") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`rock beats scissors, human wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`rock beats scissors, human wins!`);
                 humanScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
             } else if (computerChoice === "scissors" && humanChoice === "paper") {
-                console.log(`computer: ${computerChoice} | human: ${humanChoice}`);
-                console.log(`scissors beats paper, computer wins!`);
+                document.getElementById("eee").innerHTML = (`computer: ${computerChoice} | human: ${humanChoice}`);
+                document.getElementById("exp").innerHTML = (`scissors beats paper, computer wins!`);
                 computerScore++;
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
-            } else {
-                console.log("invalid characters!");
-                console.log(`Computer: ${computerScore} | Human: ${humanScore}`);
+                document.getElementById("rezultz").innerHTML = (`Computer: ${computerScore} | Human: ${humanScore}`);
+            } else{
+                console.log("broken")
             }
+
         }
 
 
